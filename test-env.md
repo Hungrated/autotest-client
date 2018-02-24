@@ -370,9 +370,17 @@ macaca run -p 4444 -d sample/test.spec.js --verbose
 # "rec": "uirecorder sample/test.spec.js"
 npm run rec
 
-# 2 回放录制
-# "rep": "selenium-standalone start & macaca run -p 4444 -d sample/test.spec.js --verbose",
+# 2(1) 启动 selenium server 服务
+# "server": "selenium-standalone start"
+npm run server
+
+# 2(2) 回放录制（需要新开一个终端）
+# "rep": "macaca run -p 4444 -d sample/test.spec.js --verbose",
 npm run rep
+
+# 2' 自动启动 selenium server 服务并回放录制（仅macOS下有效）
+# "autorep": "npm run server & npm run rep"
+npm run autorep
 
 # 3 抹掉之前录制内容
 # "delrec": "rm -rf sample"

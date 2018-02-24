@@ -24,8 +24,12 @@ npm run ios
 # new record
 npm run rec
 
-# replay record
-npm run rep
+# replay record (macOS)
+npm run autorep
+
+# replay record (Windows)
+npm run server
+npm run rep  # (requires a new terminal)
 
 # delete previous js file
 npm run delrec

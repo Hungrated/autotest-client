@@ -8,7 +8,9 @@
         "android": "make test-android-chrome",
         "ios": "make test-ios-safari",
         "rec": "uirecorder sample/test.spec.js",
-        "rep": "selenium-standalone start & macaca run -p 4444 -d sample/test.spec.js --verbose",
+        "server": "selenium-standalone start",
+        "rep": "macaca run -p 4444 -d sample/test.spec.js --verbose",
+        "autorep": "npm run server & npm run rep",
         "delrec": "rm -rf sample",
         "rerec": "npm run delrec && npm run rec"
     },
