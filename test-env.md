@@ -259,10 +259,10 @@ npm i macaca-cli -g
 npm i --save-dev mocha macaca-cli macaca-wd macaca-reporter macaca-chrome chai
 
 # 移动端测试：iOS
-npm i --save-dev macaca-cli macaca-ios
+npm i --save-dev mocha macaca-cli macaca-wd macaca-ios macaca-reporter chai
 
 # 移动端测试：Android
-npm i --save-dev mocha macaca-cli macaca-wd macaca-android macaca-reporter macaca-chrome chai
+npm i --save-dev mocha macaca-cli macaca-wd macaca-android macaca-reporter chai
 
 ```
 参考链接：https://macacajs.github.io/zh/environment-setup

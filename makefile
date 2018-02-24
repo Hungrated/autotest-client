@@ -14,7 +14,7 @@ test-android:
 	platform=android macaca run --verbose --reporter macaca-reporter -d ./src/desktop_chrome.test.js
 test-ios-safari:
 	macaca doctor
-	browser=safari macaca run --verbose --reporter macaca-reporter -d ./src/desktop_chrome.test.js
+	browser=safari macaca run --verbose --reporter macaca-reporter -d ./src/ios_safari.test.js
 test-android-chrome:
 	macaca doctor
 	browser=chrome macaca run --verbose --reporter macaca-reporter -d ./src/android_chrome.test.js
