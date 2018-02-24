@@ -322,9 +322,13 @@ uirecorder（录制回放器） - PC：
 npm i uirecorder -g
 npm i --save-dev jwebdriver resemblejs-node
 
+# 初始化uirecorder
+uirecorder init
+
 # 本地部署Selenium Standalone Server （回放过程必不可少要开启的服务）
 npm i selenium-standalone@latest -g
 selenium-standalone install
+
 ```
 
 参考链接：https://github.com/alibaba/uirecorder
@@ -352,8 +356,9 @@ macaca run -p 4444 -d sample/test.spec.js --verbose
 
 * **注意事项：**  
 1. 默认文件名为 `sample/test.spec.js`，若文件存在，开始录制后会先执行文件中现有的内容，再进行新的录制
-2. 回放录制时，必须先运行 `Selenium Standalone Server`，否则会报错
-3. 已定义自动脚本，只需执行相应命令即可录制和回放测试内容
+2. 使用uirecorder之前必须先初始化
+3. 回放录制时，必须先运行 `Selenium Standalone Server`，否则会报错
+4. 已定义自动脚本，只需执行相应命令即可录制和回放测试内容
 
 #### 5.4 便捷使用
 
