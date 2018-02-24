@@ -6,10 +6,10 @@ initial commit on Feb 24 2018
 ## SETUP
 
 ```bash
-# install dependencies
+# 1 install dependencies
 npm i
 
-# see demo:
+# 2 see demo:
 # desktop chrome test
 npm run desktop
 
@@ -18,6 +18,20 @@ npm run android
 
 # ios safari test
 npm run ios
+
+# 3 use uirecorder:
+# new record
+npm run rec
+
+# replay record
+npm run rep
+
+# delete previous js file
+npm run delrec
+
+# delete previous js file & record again
+npm run rerec
+
 ```
 
 ## DETAILS

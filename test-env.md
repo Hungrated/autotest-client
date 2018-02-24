@@ -311,3 +311,70 @@ test-desktop-chrome:
 	browser=chrome macaca run --verbose --reporter macaca-reporter -d ./src/desktop_chrome.test.js
 ```
 
+### 5 利用 `uirecorder` 录制测试操作
+
+#### 5.11 环境搭建
+
+uirecorder（录制回放器） - PC：
+
+```
+# 安装工具包与依赖（全局安装）
+npm i uirecorder -g
+npm i --save-dev jwebdriver resemblejs-node
+
+# 本地部署Selenium Standalone Server （回放过程必不可少要开启的服务）
+npm i selenium-standalone@latest -g
+selenium-standalone install
+```
+
+参考链接：https://github.com/alibaba/uirecorder
+
+#### 5.2 开始录制
+
+```
+# 第一步：开启 uirecorder
+uirecorder sample/test.spec.js
+
+# 第二步：在弹出的浏览器中输入待测试网址
+
+# 第三步：开始录制操作
+```
+
+#### 5.3 回放录制的脚本
+
+```
+# 第一步：启动 selenium server 服务
+selenium-standalone start
+
+# 第二步：运行回放
+macaca run -p 4444 -d sample/test.spec.js --verbose
+```
+
+* **注意事项：**  
+1. 默认文件名为 `sample/test.spec.js`，若文件存在，开始录制后会先执行文件中现有的内容，再进行新的录制
+2. 回放录制时，必须先运行 `Selenium Standalone Server`，否则会报错
+3. 已定义自动脚本，只需执行相应命令即可录制和回放测试内容
+
+#### 5.4 便捷使用
+
+为方便起见，在 `package.json` 中定义命令如下，直接调用即可：
+
+```
+# 配置环境完成之后：
+
+# 1 开始录制
+# "rec": "uirecorder sample/test.spec.js"
+npm run rec
+
+# 2 回放录制
+# "rep": "selenium-standalone start & macaca run -p 4444 -d sample/test.spec.js --verbose",
+npm run rep
+
+# 3 抹掉之前录制内容
+# "delrec": "rm -rf sample"
+npm run delrec
+
+# 4 抹掉之前录制内容并重新开始录制
+# "rerec": "npm run delrec && npm run rec"
+npm run rerec
+```

@@ -1,32 +1,37 @@
 {
-  "name": "macaca-test-env",
-  "version": "0.0.1",
-  "description": "An exact environment for web testing, with flexbility.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "desktop": "make test-desktop-chrome",
-    "android": "make test-android-chrome",
-    "ios": "make test-ios-safari"
-  },
-  "keywords": [
-    "test",
-    "macaca"
-  ],
-  "author": "Hungrated",
-  "license": "MIT",
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "macaca-android": "^2.0.46",
-    "macaca-chrome": "^1.0.7",
-    "macaca-cli": "^2.1.0",
-    "macaca-ios": "^2.0.30",
-    "macaca-reporter": "^1.0.52",
-    "macaca-wd": "^1.0.19",
-    "mocha": "^5.0.1"
-  },
-  "dependencies": {
-    "opn": "^5.2.0",
-    "path": "^0.12.7"
-  }
+    "name": "macaca-test-env",
+    "version": "1.0.0",
+    "description": "An exact environment for web testing, with flexbility.",
+    "main": "index.js",
+    "scripts": {
+        "desktop": "make test-desktop-chrome",
+        "android": "make test-android-chrome",
+        "ios": "make test-ios-safari",
+        "rec": "uirecorder sample/test.spec.js",
+        "rep": "selenium-standalone start & macaca run -p 4444 -d sample/test.spec.js --verbose",
+        "delrec": "rm -rf sample",
+        "rerec": "npm run delrec && npm run rec"
+    },
+    "keywords": [
+        "test",
+        "macaca"
+    ],
+    "author": "Hungrated",
+    "license": "MIT",
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "jwebdriver": "^2.2.5",
+        "macaca-android": "^2.0.46",
+        "macaca-chrome": "^1.0.7",
+        "macaca-cli": "^2.1.0",
+        "macaca-ios": "^2.0.30",
+        "macaca-reporter": "^1.0.52",
+        "macaca-wd": "^1.0.19",
+        "mocha": "^5.0.1",
+        "resemblejs-node": "^1.0.0"
+    },
+    "dependencies": {
+        "opn": "^5.2.0",
+        "path": "^0.12.7"
+    }
 }

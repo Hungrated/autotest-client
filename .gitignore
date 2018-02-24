@@ -3,3 +3,15 @@
 /package-lock.json
 /reports/
 /logs/
+/install.sh
+/uirecorder.log
+/screenshots/
+/config.json
+/uploadfiles/
+/.editorconfig
+/run.sh
+/sample/
+/run.bat
+/commons/
+/.vscode/
+/hosts
