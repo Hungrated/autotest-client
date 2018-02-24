@@ -312,7 +312,7 @@ test-desktop-chrome:
 
 ### 5 利用 `uirecorder` 录制测试操作
 
-#### 5.11 环境搭建
+#### 5.1 环境搭建
 
 uirecorder（录制回放器） - PC：
 
