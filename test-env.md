@@ -1,8 +1,7 @@
 # 测试
 
-> 此篇规范说明针对 `alibaba/macaca` 编写  
-> `macaca` 是基于 `mocha` 的多端测试工具，断言库选择 `chai.expect`
-
+> 此篇说明针对 `alibaba/macaca` 编写  
+> `macaca` 是基于 `mocha` 的多端测试工具，断言库选择 `chai.expect`，另外还用到了 `uirecorder` 库
 
 ### 1 mocha相关
 
