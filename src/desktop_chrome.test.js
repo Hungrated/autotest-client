@@ -31,7 +31,7 @@ describe('demo.test.js', function () {
     return driver.init(pcOpts)
   })
 
-  // 每项测试结束后的操作
+  // 每项测试开始前的操作
   beforeEach(function () {
     console.log('before new test sample')
   })

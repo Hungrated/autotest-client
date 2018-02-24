@@ -22,4 +22,4 @@ npm run ios
 
 ## DETAILS
 
-see: [test-env.md](test-env.md)
+See: [test-env.md](test-env.md)
