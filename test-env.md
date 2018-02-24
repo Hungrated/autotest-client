@@ -271,6 +271,7 @@ npm i --save-dev mocha macaca-cli macaca-wd macaca-android macaca-reporter chai
 1. 全局安装不要用sudo命令，推荐使用nvm安装node，可将node和npm安装到用户目录下（若安装在系统目录下，会导致测试脚本运行失败！）
 2. Java环境只支持Java 1.8，不支持Java 9
 3. 不同移动平台测试需要安装对应驱动，否则无法运行测试用例！
+4. Android 测试推荐使用 ANDROID API 23 模拟器，若版本太新则报错！
 
 * **配置环境样例：**
 
