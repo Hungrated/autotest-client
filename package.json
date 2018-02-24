@@ -20,5 +20,8 @@
     "macaca-reporter": "^1.0.52",
     "macaca-wd": "^1.0.19",
     "mocha": "^5.0.1"
+  },
+  "dependencies": {
+    "opn": "^5.2.0"
   }
 }

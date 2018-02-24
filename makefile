@@ -20,4 +20,4 @@ test-android-chrome:
 	browser=chrome macaca run --verbose --reporter macaca-reporter -d ./macaca-test/mobile-browser-sample.test.js
 test-desktop-chrome:
 	macaca doctor
-	CHROMEDRIVER_VERSION=2.33 browser=chrome macaca run --verbose --reporter macaca-reporter -d ./demo.test.js
+	browser=chrome macaca run --verbose --reporter macaca-reporter -d ./demo.test.js

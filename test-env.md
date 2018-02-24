@@ -137,7 +137,11 @@ const AndroidChromeOpts = {
     // app: 'path/to/app'
 };
 
-describe('demo.test.js', function(){
+describe('demo.test.js', function() {
+    
+  // 设定测试时间
+  this.timeout(5 * 60 * 1000)
+  
   // 测试前的初始化操作
   before(function() {
     return driver.init(pcOpts);
