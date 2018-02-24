@@ -8,6 +8,7 @@ initial commit on Feb 24 2018
 ```bash
 # 1 install dependencies
 npm i
+npm i macaca-cli -g
 
 # 2 see demo:
 # desktop chrome test
