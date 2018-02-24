@@ -247,7 +247,7 @@ module.exports = (wd, isIOS) => {
 
 ### 4 macaca 测试环境配置完整过程
 
-#### 4.1 安装环境、工具包和驱动并检查
+#### 4.1 安装环境、工具包和驱动
 
 按照官方文档安装好环境后，执行：
 ```bash
@@ -277,23 +277,36 @@ npm i --save-dev mocha macaca-cli macaca-wd macaca-android macaca-reporter chai
 ```
 // package.json
 
-"devDependencies": {
+  "devDependencies": {
     "chai": "^4.1.2",
+    "macaca-android": "^2.0.46",
     "macaca-chrome": "^1.0.7",
     "macaca-cli": "^2.1.0",
+    "macaca-ios": "^2.0.30",
     "macaca-reporter": "^1.0.52",
     "macaca-wd": "^1.0.19",
     "mocha": "^5.0.1"
+  },
+  "dependencies": {
+    "opn": "^5.2.0",
+    "path": "^0.12.7"
   }
 ```
 
-#### 4.2
+#### 4.2 检查环境配置
+```
+macaca doctor
+```
 
-#### 4.3
+#### 4.3 开始测试
+```
+# makefile
 
-#### 4.4
-
-#### 4.5
-
-
+test-ios-safari:
+	browser=safari macaca run --verbose --reporter macaca-reporter -d ./src/ios_safari.test.js
+test-android-chrome:
+	browser=chrome macaca run --verbose --reporter macaca-reporter -d ./src/android_chrome.test.js
+test-desktop-chrome:
+	browser=chrome macaca run --verbose --reporter macaca-reporter -d ./src/desktop_chrome.test.js
+```
 
