@@ -8,16 +8,16 @@ test:
 	@echo "make simple-reporter        Test sample for PC with simple reporter"
 test-ios:
 	macaca doctor
-	platform=ios macaca run --verbose --reporter macaca-reporter -d ./macaca-test/mobile-app-sample.test.js
+	platform=ios macaca run --verbose --reporter macaca-reporter -d ./src/desktop_chrome.test.js
 test-android:
 	macaca doctor
-	platform=android macaca run --verbose --reporter macaca-reporter -d ./macaca-test/mobile-app-sample.test.js
+	platform=android macaca run --verbose --reporter macaca-reporter -d ./src/desktop_chrome.test.js
 test-ios-safari:
 	macaca doctor
-	browser=safari macaca run --verbose --reporter macaca-reporter -d ./macaca-test/mobile-browser-sample.test.js
+	browser=safari macaca run --verbose --reporter macaca-reporter -d ./src/desktop_chrome.test.js
 test-android-chrome:
 	macaca doctor
-	browser=chrome macaca run --verbose --reporter macaca-reporter -d ./macaca-test/mobile-browser-sample.test.js
+	browser=chrome macaca run --verbose --reporter macaca-reporter -d ./src/android_chrome.test.js
 test-desktop-chrome:
 	macaca doctor
-	browser=chrome macaca run --verbose --reporter macaca-reporter -d ./demo.test.js
+	browser=chrome macaca run --verbose --reporter macaca-reporter -d ./src/desktop_chrome.test.js

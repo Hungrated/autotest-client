@@ -4,6 +4,9 @@ var wd = require('macaca-wd')
 // 引入断言库
 var expect = require('chai').expect
 
+var opn = require('opn')
+var path = require('path')
+
 // 定义 webdriver client 要链接的服务端 host 和 port
 var remoteConfig = {
   host: 'localhost',
@@ -12,12 +15,6 @@ var remoteConfig = {
 
 // 后面 driver 直接使用链式调用即可
 var driver = wd.promiseChainRemote(remoteConfig)
-
-// 桌面端配置
-const pcOpts = {
-  platformName: 'desktop', // iOS, Android, Desktop
-  browserName: 'chrome'    // Chrome, Electron
-}
 
 // 移动端配置
 const iOSSafariOpts = {
@@ -28,17 +25,16 @@ const iOSSafariOpts = {
 
 const AndroidChromeOpts = {
   platformName: 'Android',
-  browserName: 'Chrome',
-  // app: 'path/to/app'
+  browserName: 'Chrome'
 }
 
-describe('demo.test.js', function () {
+describe('android_chrome.test.js', function () {
   // 设定测试时间
   this.timeout(5 * 60 * 1000)
 
   // 测试前的初始化操作
   before(function () {
-    return driver.init(pcOpts)
+    return driver.init(AndroidChromeOpts)
   })
 
   // 每项测试结束后的操作
@@ -53,7 +49,7 @@ describe('demo.test.js', function () {
 
   // 所有测试结束后的操作
   after(function () {
-    // opn(path.join(__dirname, '..', 'reports', 'index.html'));
+    opn(path.join(__dirname, '..', 'reports', 'index.html'));
     return driver.sleep(1000).quit()
   })
 

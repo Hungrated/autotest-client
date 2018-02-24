@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "desktop": "make test-desktop-chrome"
+    "desktop": "make test-desktop-chrome",
+    "android": "make test-android-chrome"
   },
   "keywords": [
     "test",
@@ -15,6 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.1.2",
+    "macaca-android": "^2.0.46",
     "macaca-chrome": "^1.0.7",
     "macaca-cli": "^2.1.0",
     "macaca-reporter": "^1.0.52",
@@ -22,6 +24,7 @@
     "mocha": "^5.0.1"
   },
   "dependencies": {
-    "opn": "^5.2.0"
+    "opn": "^5.2.0",
+    "path": "^0.12.7"
   }
 }
