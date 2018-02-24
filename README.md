@@ -19,3 +19,7 @@ npm run android
 # ios safari test
 npm run ios
 ```
+
+## DETAILS
+
+see: [test-env.md](test-env.md)
