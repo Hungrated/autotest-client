@@ -30,6 +30,7 @@ npm run autorep
 # replay record (Windows)
 npm run server
 npm run rep  # (requires a new terminal)
+npm run stop
 
 # delete previous js file
 npm run delrec

@@ -361,7 +361,7 @@ macaca run -p 4444 -d sample/test.spec.js --verbose
 
 #### 5.4 便捷使用
 
-为方便起见，在 `package.json` 中定义命令如下，直接调用即可：
+为方便使用，在 `package.json` 中定义命令如下，直接调用即可：
 
 ```
 # 配置环境完成之后：
@@ -378,8 +378,12 @@ npm run server
 # "rep": "macaca run -p 4444 -d sample/test.spec.js --verbose",
 npm run rep
 
+# 2(3) 停止 selenium server 服务
+# "stop": "pkill -f selenium-standalone"
+npm run stop
+
 # 2' 自动启动 selenium server 服务并回放录制（仅macOS下有效）
-# "autorep": "npm run server & npm run rep"
+# "autorep": "npm run server & npm run rep && npm run stop"
 npm run autorep
 
 # 3 抹掉之前录制内容
