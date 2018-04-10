@@ -4,6 +4,7 @@
     "description": "An exact environment for web testing, with flexbility.",
     "main": "index.js",
     "scripts": {
+        "start": "selenium-standalone start",
         "desktop": "make test-desktop-chrome",
         "android": "make test-android-chrome",
         "ios": "make test-ios-safari",
