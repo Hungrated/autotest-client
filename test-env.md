@@ -394,3 +394,9 @@ npm run delrec
 # "rerec": "npm run delrec && npm run rec"
 npm run rerec
 ```
+
+### 6 回放与多端测试
+
+需要配置 `F2Etest` 环境，进行私有服务端多浏览器测试。
+
+参考资料： http://shaofan.org/f2etest/
