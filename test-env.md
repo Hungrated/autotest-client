@@ -279,13 +279,15 @@ npm i --save-dev mocha macaca-cli macaca-wd macaca-android macaca-reporter chai
 
   "devDependencies": {
     "chai": "^4.1.2",
-    "macaca-android": "^2.0.46",
+    "jwebdriver": "^2.2.5",
+    "macaca-android": "^2.0.47",
     "macaca-chrome": "^1.0.7",
-    "macaca-cli": "^2.1.0",
+    "macaca-cli": "^2.1.2",
     "macaca-ios": "^2.0.30",
-    "macaca-reporter": "^1.0.52",
-    "macaca-wd": "^1.0.19",
-    "mocha": "^5.0.1"
+    "macaca-reporter": "^1.1.0",
+    "macaca-wd": "^1.0.37",
+    "mocha": "^5.1.0",
+    "resemblejs-node": "^1.0.0"
   },
   "dependencies": {
     "opn": "^5.2.0",
