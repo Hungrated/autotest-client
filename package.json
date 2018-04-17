@@ -1,5 +1,5 @@
 {
-    "name": "macaca-test-env",
+    "name": "autotest-client",
     "version": "1.0.0",
     "description": "An exact environment for web testing, with flexbility.",
     "main": "index.js",
