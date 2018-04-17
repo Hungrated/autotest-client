@@ -30,6 +30,7 @@
         "macaca-cli": "^2.1.2",
         "macaca-ios": "^2.0.30",
         "macaca-reporter": "^1.1.0",
+        "macaca-simple-reportor": "^1.0.0",
         "macaca-wd": "^1.0.37",
         "mocha": "^5.1.0",
         "resemblejs-node": "^1.0.0"

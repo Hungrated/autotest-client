@@ -408,3 +408,5 @@ npm run rerec
 #### 6.2 简易解决方案
 
 在Windows Server服务器上开启node服务，上传测试代码并执行
+
+https://github.com/Hungrated/autotest-service
